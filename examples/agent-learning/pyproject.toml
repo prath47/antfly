@@ -1,0 +1,13 @@
+[project]
+name = "antfly-agent-learning-example"
+version = "0.1.0"
+description = "Store agent execution traces in Antfly, then search, score, compare and export them"
+requires-python = ">=3.11"
+dependencies = []
+
+[dependency-groups]
+dev = ["pytest>=8,<10"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

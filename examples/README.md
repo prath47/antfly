@@ -46,9 +46,18 @@ over HTTP and embedded. [Codex on Antfly](https://github.com/antflydb/codex/blob
 is the full integration: a fork of the Codex CLI that keeps its knowledge,
 decisions, and session history in Antfly.
 
+## Agent evaluation
+
+| Example | Language | What it shows |
+|---|---|---|
+| [agent-learning](agent-learning/) | Python | Store agent execution traces, search failed runs, score them with independent checks, compare workflows on held-out tasks under one tool-call budget, and export training data. Needs only a running server, no models |
+
 ## Testing
 
 ```bash
+# Model-free; the live test runs when ANTFLY_URL is set
+(cd examples/agent-learning && ANTFLY_URL=http://127.0.0.1:8080 uv run pytest)
+
 # Requires libantfly (zig build capi)
 (cd examples/antfly-docs-knowledge-base && GOWORK=off GOEXPERIMENT=simd go test ./...)
 

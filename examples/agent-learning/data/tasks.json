@@ -1,0 +1,19 @@
+[
+  {"id": "t01", "split": "train", "question": "How long do I have to get a refund on my subscription?", "expected_source": "refunds", "must_include": ["30 days"]},
+  {"id": "t02", "split": "train", "question": "I paid for an annual plan last month. Can I still get a refund?", "expected_source": "refunds_annual", "must_include": ["pro rata", "60 days"]},
+  {"id": "t03", "split": "train", "question": "When will my hardware order ship?", "expected_source": "shipping", "must_include": ["5 business days"]},
+  {"id": "t04", "split": "train", "question": "I am ordering hardware from overseas. When will the order ship?", "expected_source": "shipping_international", "must_include": ["10 business days"]},
+  {"id": "t05", "split": "train", "question": "How do I reassign a seat to a new member?", "expected_source": "seats", "must_include": ["reassign"]},
+  {"id": "t06", "split": "train", "question": "Our school is on the education plan. Can we reassign a seat to another student?", "expected_source": "seats_education", "must_include": ["academic term"]},
+  {"id": "t07", "split": "train", "question": "How do I export my workspace data?", "expected_source": "data_export", "must_include": ["JSON"]},
+  {"id": "t08", "split": "train", "question": "We deleted our workspace yesterday. Can we still export the data?", "expected_source": "data_export_deleted", "must_include": ["14 days"]},
+  {"id": "t09", "split": "train", "question": "My password reset link stopped working.", "expected_source": "password_reset", "must_include": ["1 hour"]},
+  {"id": "t10", "split": "train", "question": "Do you offer a discount for nonprofit subscriptions?", "expected_source": null, "must_include": []},
+  {"id": "h01", "split": "heldout", "question": "Is a refund possible on a yearly subscription?", "expected_source": "refunds_annual", "must_include": ["pro rata"]},
+  {"id": "h02", "split": "heldout", "question": "Our invoiced enterprise contract renewed by mistake. Can we get a refund?", "expected_source": "refunds_enterprise", "must_include": ["account manager"]},
+  {"id": "h03", "split": "heldout", "question": "This is an international hardware order. When does it ship?", "expected_source": "shipping_international", "must_include": ["10 business days"]},
+  {"id": "h04", "split": "heldout", "question": "Can an admin reassign a seat to someone else?", "expected_source": "seats", "must_include": ["reassign"]},
+  {"id": "h05", "split": "heldout", "question": "We deleted a workspace three weeks ago. Can we export it now?", "expected_source": "data_export_deleted", "must_include": ["purged"]},
+  {"id": "h06", "split": "heldout", "question": "Is there a phone number for live help?", "expected_source": null, "must_include": []},
+  {"id": "h07", "split": "heldout", "question": "I returned an international hardware order. When will the refund arrive?", "expected_source": null, "must_include": []}
+]

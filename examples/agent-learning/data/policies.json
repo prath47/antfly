@@ -1,0 +1,111 @@
+[
+  {
+    "id": "refunds",
+    "kind": "policy",
+    "status": "current",
+    "version": 3,
+    "title": "Subscription refunds",
+    "body": "Subscriptions can be refunded in full within 30 days of the charge. After 30 days the charge is final, but you can cancel to stop the next renewal.",
+    "answer": "You can get a full refund within 30 days of the charge. After that the charge is final, but cancelling stops the next renewal."
+  },
+  {
+    "id": "refunds_v2",
+    "kind": "policy",
+    "status": "superseded",
+    "version": 2,
+    "title": "Subscription refunds",
+    "body": "Subscriptions can be refunded within 14 days of the charge.",
+    "answer": "You can get a refund within 14 days of the charge."
+  },
+  {
+    "id": "refunds_annual",
+    "kind": "exception",
+    "status": "current",
+    "version": 1,
+    "applies_to": "refunds",
+    "triggers": ["annual", "yearly"],
+    "title": "Annual plan refunds",
+    "body": "Annual plans are refunded pro rata for unused months when the request arrives within 60 days of the charge.",
+    "answer": "Annual plans get a pro rata refund for the unused months if you ask within 60 days of the charge."
+  },
+  {
+    "id": "refunds_enterprise",
+    "kind": "exception",
+    "status": "current",
+    "version": 1,
+    "applies_to": "refunds",
+    "triggers": ["enterprise", "invoiced", "invoice"],
+    "title": "Invoiced enterprise contracts",
+    "body": "Invoiced enterprise contracts are not refunded through the help desk. Billing credits are handled by the account manager.",
+    "answer": "Invoiced enterprise contracts aren't refunded through the help desk. Your account manager handles billing credits."
+  },
+  {
+    "id": "shipping",
+    "kind": "policy",
+    "status": "current",
+    "version": 2,
+    "title": "Hardware shipping",
+    "body": "Hardware orders ship within 5 business days of payment.",
+    "answer": "Hardware orders ship within 5 business days of payment."
+  },
+  {
+    "id": "shipping_international",
+    "kind": "exception",
+    "status": "current",
+    "version": 1,
+    "applies_to": "shipping",
+    "triggers": ["international", "overseas", "abroad"],
+    "title": "International hardware shipping",
+    "body": "International hardware orders ship within 10 business days. Customs fees are paid by the recipient.",
+    "answer": "International hardware orders ship within 10 business days, and customs fees are paid by the recipient."
+  },
+  {
+    "id": "seats",
+    "kind": "policy",
+    "status": "current",
+    "version": 1,
+    "title": "Seat reassignment",
+    "body": "Workspace admins can reassign a seat to another member at any time from the Members page.",
+    "answer": "A workspace admin can reassign the seat to another member at any time from the Members page."
+  },
+  {
+    "id": "seats_education",
+    "kind": "exception",
+    "status": "current",
+    "version": 1,
+    "applies_to": "seats",
+    "triggers": ["education", "school", "student", "students"],
+    "title": "Education plan seats",
+    "body": "Seats on education plans are locked to one member for the academic term and cannot be reassigned until it ends.",
+    "answer": "Education plan seats are locked to one member for the academic term, so the seat can't be reassigned until the term ends."
+  },
+  {
+    "id": "data_export",
+    "kind": "policy",
+    "status": "current",
+    "version": 1,
+    "title": "Workspace data export",
+    "body": "Workspace owners can export workspace data as JSON from Settings, then Export.",
+    "answer": "Workspace owners can export the data as JSON from Settings, then Export."
+  },
+  {
+    "id": "data_export_deleted",
+    "kind": "exception",
+    "status": "current",
+    "version": 1,
+    "applies_to": "data_export",
+    "triggers": ["deleted", "removed"],
+    "title": "Deleted workspaces",
+    "body": "Deleted workspaces are kept for 14 days. Owners can restore and export a deleted workspace during that window. After 14 days the data is purged and cannot be exported.",
+    "answer": "Deleted workspaces are kept for 14 days. Within that window the owner can restore and export it; after 14 days the data is purged and can't be exported."
+  },
+  {
+    "id": "password_reset",
+    "kind": "policy",
+    "status": "current",
+    "version": 1,
+    "title": "Password reset",
+    "body": "Members can reset a password from the sign-in page. Password reset links expire after 1 hour.",
+    "answer": "Request a new password reset link from the sign-in page. Reset links expire after 1 hour."
+  }
+]
